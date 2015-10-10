@@ -30,19 +30,17 @@
   {% block meta %}
   <meta name="author" content="{{ AUTHOR }}" />
   <meta name="description" content="{{ SITEDESCRIPTION }}" />
-  {% include "partial/og.html" %}
   {% endblock %}
   <title>{{ SITENAME }}{% block title %}{% endblock %}</title>
 </head>
 <body>
-  {% include "partial/gtm.html" %}
   <aside>
     <div>
       <a href="{{ SITEURL }}">
         {% if SITELOGO %}
         <img src="{{ SITELOGO }}" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
         {% else %}
-        <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/profile.png" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
+        <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/logo.png" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
         {% endif %}
       </a>
       <h1><a href="{{ SITEURL }}">{{ SITETITLE }}</a></h1>
@@ -53,13 +51,13 @@
           <li><a href="{{ SITEURL }}/{{ page.url }}#{{ page.slug }}">{{ page.title }}</a></li>
           {% endfor %}
           {% for name, link in LINKS %}
-          <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
+          <li><a href="{{ link }}">{{ name }}</a></li>
           {% endfor %}
         </ul>
       </nav>
       <ul class="social">
         {% for name, link in SOCIAL %}
-        <li><a class="sc-{{ name }}" href="{{ link }}" target="_blank"><i class="fa fa-{{ name }}"></i></a></li>
+        <li><a class="sc-{{ name }}" href="{{ link }}" ><i class="fa fa-{{ name }}"></i></a></li>
         {% endfor %}
       </ul>
     </div>
@@ -67,9 +65,9 @@
   <main>
     {% if MAIN_MENU %}
     <nav>
-      <a href="{{ SITEURL }}">Home</a>
-      {% for title, link in MENUITEMS %}
-      <a href="{{ link }}">{{ title }}</a>
+		<!-- <a href="{{ SITEURL }}">Home</a> -->
+      {% for name, link in MENUITEMS %}
+	  <a class="sc-{{ name }}" href="{{ link }}" ><i class="fa fa-{{ name }}"></i> {{ name}}</a>
       {% endfor %}
       {% if FEED_ALL_ATOM %}
       <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">Atom</a>
@@ -89,14 +87,8 @@
       {% else %}
       <p>&copy; {{ AUTHOR }} {{ COPYRIGHT_YEAR }}</p>
       {% include "partial/flex.html" %}
-      {% include "partial/statuscake.html" %}
       {% endif %}
     </footer>
   </main>
-  {% include "partial/ga.html" %}
-  {% if ADD_THIS_ID %}
-  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid={{ ADD_THIS_ID }}" async="async"></script>
-  {% endif %}
-  {% block additional_js %}{% endblock %}
 </body>
 </html>
