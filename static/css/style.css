@@ -123,10 +123,10 @@ main article code,main article kbd,main article pre,main article samp {
 	font-family:'Source Code Pro',Consolas,monospace
 }
 main article blockquote,main article pre {
-	background-color:rgba(128,128,128,.05);
+	background-color: #242121;
 	border-top-right-radius:5px;
 	border-bottom-right-radius:5px;
-	border-left:8px solid rgba(128,128,128,.075);
+	border-left:8px solid #999999;
 	border-left-width:10px
 }
 main article blockquote {
@@ -286,7 +286,7 @@ ul.social a.sc-envelope-o {
 }
 @media screen and (min-width:768px) {
 	aside {
-		width:25%;
+		width:20%;
 		height:100%;
 		position:fixed;
 		top:0;
@@ -304,10 +304,10 @@ ul.social a.sc-envelope-o {
 		padding-top:32px
 	}
 	main {
-		width:75%;
+		width:80%;
 		position:absolute;
 		top:0;
-		left:25%;
+		left:20%;
 		overflow-x:hidden;
 		overflow-y:hidden
 	}
