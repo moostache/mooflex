@@ -254,36 +254,7 @@ ul.social a {
 	font-size:.8em;
 	line-height:36px
 }
-ul.social a.sc-facebook {
-	background-color:#3e5b98
-}
-ul.social a.sc-google {
-	background-color:#d93e2d
-}
-ul.social a.sc-pinterest {
-	background-color:#c92619
-}
-ul.social a.sc-linkedin {
-	background-color:#3371b7
-}
-ul.social a.sc-rss {
-	background-color:#f26109
-}
-ul.social a.sc-stack-overflow {
-	background-color:#f90
-}
-ul.social a.sc-twitter {
-	background-color:#4da7de
-}
-ul.social a.sc-youtube {
-	background-color:#e02a20
-}
-ul.social a.sc-github,ul.social a.sc-github-alt {
-	background-color:#111010
-}
-ul.social a.sc-envelope-o {
-	background-color:#578AD6
-}
+
 @media screen and (min-width:768px) {
 	aside {
 		width:20%;
