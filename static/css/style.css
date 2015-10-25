@@ -195,7 +195,7 @@ main footer p {
 	color:#999;
 	font-size:11px
 }
-.tag-cloud a,a.btn {
+.tags a,a.btn {
 	text-align:center;
 	line-height:1;
 	color:#fff;
@@ -203,17 +203,17 @@ main footer p {
 	vertical-align:baseline;
 	border-radius:.25em
 }
-.tag-cloud a {
+.tags a {
 	background-color:#d9411e;
 	padding:.2em .6em;
 	font-size:.74em
 }
-.tag-cloud a:hover {
+.tags a:hover {
 	background-color:#ff5a09
 }
 a.btn {
 	background-color:#d9411e;
-	padding:.4em .6em;
+	padding: 0.2em 0.5em;
 	font-size:.9em
 }
 a.btn:hover {
