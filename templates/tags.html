@@ -3,15 +3,15 @@
 
 {% block content %}
 <article>
-  <header>
-    <h1>Tags</h1>
-  </header>
-  <div>
-    <ul class="list">
-      {%- for tag, articles in tags|sort %}
-          <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> ({{ articles|count }})</li>
-      {% endfor %}
-    </ul>
-  </div>
+    <header>
+        <h1>Tags</h1>
+    </header>
+    <div>
+        <ul class="list tags">
+            {%- for tag, articles in tags|sort %}
+                <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}<span>{{ articles|count }}</span></a></li>
+            {% endfor %}
+        </ul>
+    </div>
 </article>
 {% endblock %}
